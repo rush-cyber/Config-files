@@ -1,0 +1,39 @@
+#!MANAGED-CONFIG https://api.tsutsu.one/sub?target=surge&ver=4&url=ss%3A%2F%2FY2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo1NDEzNDcyMS1hOGMwLTRlNjctOWQxNS0zYjc1ZWYxM2MwZDZAaGswMS53b2wxLm1sOjQ0Mw%23%25E5%25A4%25A7%25E8%2590%259D%25E5%258D%259C%25E9%25B8%25A1%25F0%259F%2587%25AD%25F0%259F%2587%25B0%25E9%25A6%2599%25E6%25B8%25AF%25E9%25AB%2598%25E9%2580%259F01%7Css%3A%2F%2FY2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo1NDEzNDcyMS1hOGMwLTRlNjctOWQxNS0zYjc1ZWYxM2MwZDZAaGswMi53b2wxLm1sOjQ0Mw%23%25E5%25A4%25A7%25E8%2590%259D%25E5%258D%259C%25E9%25B8%25A1%25F0%259F%2587%25AD%25F0%259F%2587%25B0%25E9%25A6%2599%25E6%25B8%25AF%25E9%25AB%2598%25E9%2580%259F02%7Cvmess%3A%2F%2FYXV0bzowYWFlODk5Ny1hZThmLTRlNTctYjFlMC1jZjk0NmVkYTcwZmFAMTIwLTI0MS0yMzYtMjE0Lm5ob3N0LjAwY2RuLmNvbToxNjYyMA%3Fremarks%3D%25E9%25A6%2599%25E6%25B8%25AFHKT-%25E4%25BC%2598%25E5%258C%25962%26obfs%3Dwebsocket%26alterId%3D0%7Css%3A%2F%2FY2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo1NDEzNDcyMS1hOGMwLTRlNjctOWQxNS0zYjc1ZWYxM2MwZDZAaGswNC53b2wxLm1sOjQ0Mw%23%25E5%25A4%25A7%25E8%2590%259D%25E5%258D%259C%25E9%25B8%25A1%25F0%259F%2587%25AD%25F0%259F%2587%25B0%25E9%25A6%2599%25E6%25B8%25AF%25E9%25AB%2598%25E9%2580%259F04%7Cvmess%3A%2F%2FYXV0bzowYWFlODk5Ny1hZThmLTRlNTctYjFlMC1jZjk0NmVkYTcwZmFAdC5tam1qbWptai5jeW91OjE2NjI3%3Fremarks%3D%25E9%25A6%2599%25E6%25B8%25AFAz-%25E4%25BC%2598%25E5%258C%25963%26obfs%3Dwebsocket%26alterId%3D0%7Cvmess%3A%2F%2FYXV0bzowYWFlODk5Ny1hZThmLTRlNTctYjFlMC1jZjk0NmVkYTcwZmFAdS5tam1qbWptai5jeW91OjE2NjI3%3Fremarks%3D%25E9%25A6%2599%25E6%25B8%25AFAz-%25E4%25BC%2598%25E5%258C%2596%26obfs%3Dwebsocket%26alterId%3D0%7Cvmess%3A%2F%2FYXV0bzowYWFlODk5Ny1hZThmLTRlNTctYjFlMC1jZjk0NmVkYTcwZmFAMTIwLTI0MS0yMzYtMjE0Lm5ob3N0LjAwY2RuLmNvbToxNjYyNw%3Fremarks%3D%25E9%25A6%2599%25E6%25B8%25AFAz-%25E4%25BC%2598%25E5%258C%25962%26obfs%3Dwebsocket%26alterId%3D0%7Cvmess%3A%2F%2FYXV0bzowYWFlODk5Ny1hZThmLTRlNTctYjFlMC1jZjk0NmVkYTcwZmFAdS5tam1qbWptai5jeW91OjE2NjIw%3Fremarks%3D%25E9%25A6%2599%25E6%25B8%25AFHKT-%25E4%25BC%2598%25E5%258C%2596%26obfs%3Dwebsocket%26alterId%3D0&insert=false&config=https%3A%2F%2Fsaraphine.cf%2FClash-rule%2Fremoteconfig%2Fsaraphineconfig.ini&emoji=true&list=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&sort=false interval=86400 strict=false
+
+[General]
+loglevel = notify
+bypass-system = true
+skip-proxy = 127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,100.64.0.0/10,localhost,*.local,e.crashlytics.com,captive.apple.com,::ffff:0:0:0:0/1,::ffff:128:0:0:0/1
+#DNS设置或根据自己网络情况进行相应设置
+bypass-tun = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12
+dns-server = 119.29.29.29,223.5.5.5
+
+[Script]
+http-request https?:\/\/.*\.iqiyi\.com\/.*authcookie= script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+
+[Proxy]
+DIRECT = direct
+🇭🇰 大萝卜鸡🇭🇰香港高速01 = ss, hk01.wol1.ml, 443, encrypt-method=chacha20-ietf-poly1305, password=54134721-a8c0-4e67-9d15-3b75ef13c0d6, tfo=false, udp-relay=false
+🇭🇰 大萝卜鸡🇭🇰香港高速02 = ss, hk02.wol1.ml, 443, encrypt-method=chacha20-ietf-poly1305, password=54134721-a8c0-4e67-9d15-3b75ef13c0d6, tfo=false, udp-relay=false
+🇭🇰 香港HKT-优化2 = vmess, 120-241-236-214.nhost.00cdn.com, 16620, username=0aae8997-ae8f-4e57-b1e0-cf946eda70fa, tls=false, vmess-aead=true, ws=true, ws-path=/, sni=120-241-236-214.nhost.00cdn.com, ws-headers=Host:120-241-236-214.nhost.00cdn.com, skip-cert-verify=false, tfo=false, udp-relay=false
+🇭🇰 大萝卜鸡🇭🇰香港高速04 = ss, hk04.wol1.ml, 443, encrypt-method=chacha20-ietf-poly1305, password=54134721-a8c0-4e67-9d15-3b75ef13c0d6, tfo=false, udp-relay=false
+🇭🇰 香港Az-优化3 = vmess, t.mjmjmjmj.cyou, 16627, username=0aae8997-ae8f-4e57-b1e0-cf946eda70fa, tls=false, vmess-aead=true, ws=true, ws-path=/, sni=t.mjmjmjmj.cyou, ws-headers=Host:t.mjmjmjmj.cyou, skip-cert-verify=false, tfo=false, udp-relay=false
+🇭🇰 香港Az-优化 = vmess, u.mjmjmjmj.cyou, 16627, username=0aae8997-ae8f-4e57-b1e0-cf946eda70fa, tls=false, vmess-aead=true, ws=true, ws-path=/, sni=u.mjmjmjmj.cyou, ws-headers=Host:u.mjmjmjmj.cyou, skip-cert-verify=false, tfo=false, udp-relay=false
+🇭🇰 香港Az-优化2 = vmess, 120-241-236-214.nhost.00cdn.com, 16627, username=0aae8997-ae8f-4e57-b1e0-cf946eda70fa, tls=false, vmess-aead=true, ws=true, ws-path=/, sni=120-241-236-214.nhost.00cdn.com, ws-headers=Host:120-241-236-214.nhost.00cdn.com, skip-cert-verify=false, tfo=false, udp-relay=false
+🇭🇰 香港HKT-优化 = vmess, u.mjmjmjmj.cyou, 16620, username=0aae8997-ae8f-4e57-b1e0-cf946eda70fa, tls=false, vmess-aead=true, ws=true, ws-path=/, sni=u.mjmjmjmj.cyou, ws-headers=Host:u.mjmjmjmj.cyou, skip-cert-verify=false, tfo=false, udp-relay=false
+
+[Proxy Group]
+🔰 节点选择 = select,♻️ 自动选择,🔮 负载均衡,DIRECT,🇭🇰 大萝卜鸡🇭🇰香港高速01,🇭🇰 大萝卜鸡🇭🇰香港高速02,🇭🇰 香港HKT-优化2,🇭🇰 大萝卜鸡🇭🇰香港高速04,🇭🇰 香港Az-优化3,🇭🇰 香港Az-优化,🇭🇰 香港Az-优化2,🇭🇰 香港HKT-优化
+♻️ 自动选择 = url-test,🇭🇰 大萝卜鸡🇭🇰香港高速01,🇭🇰 大萝卜鸡🇭🇰香港高速02,🇭🇰 香港HKT-优化2,🇭🇰 大萝卜鸡🇭🇰香港高速04,🇭🇰 香港Az-优化3,🇭🇰 香港Az-优化,🇭🇰 香港Az-优化2,🇭🇰 香港HKT-优化,url=http://www.gstatic.com/generate_204,interval=150
+🔮 负载均衡 = load-balance,default=.*,
+
+[Rule]
+RULE-SET,https://saraphine.cf/Clash-rule/BanAD.list,REJECT,update-interval=86400
+RULE-SET,https://saraphine.cf/Clash-rule/BanProgramAD.list,REJECT,update-interval=86400
+RULE-SET,https://saraphine.cf/Clash-rule/BanEasyList.list,REJECT,update-interval=86400
+RULE-SET,https://saraphine.cf/Clash-rule/BanEasyListChina.list,REJECT,update-interval=86400
+RULE-SET,https://saraphine.cf/Clash-rule/BanEasyPrivacy.list,REJECT,update-interval=86400
+RULE-SET,https://saraphine.cf/Clash-rule/Ruleset/1-direct,DIRECT,update-interval=86400
+GEOIP,CN,DIRECT
+RULE-SET,https://saraphine.cf/Clash-rule/ProxyLite.list,🔰 节点选择,update-interval=86400
+FINAL,🔰 节点选择
