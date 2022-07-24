@@ -1,0 +1,44 @@
+#!MANAGED-CONFIG https://api.tsutsu.one/sub?target=surge&ver=4&url=ss%3A%2F%2FY2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHIXlCd1BXSDNWYW8%4038.68.134.122%3A800%2F%23%25F0%259F%2587%25BA%25F0%259F%2587%25B8US_00%2520%2540WangCai_1%7Css%3A%2F%2FY2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHIXlCd1BXSDNWYW8%4038.68.134.122%3A801%2F%23%25F0%259F%2587%25BA%25F0%259F%2587%25B8US_01%2520%2540WangCai_1%7Css%3A%2F%2FY2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHIXlCd1BXSDNWYW8%4038.68.134.122%3A802%2F%23%25F0%259F%2587%25BA%25F0%259F%2587%25B8US_02%2520%2540WangCai_1%7Css%3A%2F%2FY2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHIXlCd1BXSDNWYW8%4038.68.134.122%3A803%2F%23%25F0%259F%2587%25BA%25F0%259F%2587%25B8US_03%2520%2540WangCai_1%7Css%3A%2F%2FY2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHIXlCd1BXSDNWYW8%4038.68.134.122%3A804%2F%23%25F0%259F%2587%25BA%25F0%259F%2587%25B8US_04%2520%2540WangCai_1%7Css%3A%2F%2FY2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHIXlCd1BXSDNWYW8%4038.68.134.122%3A805%2F%23%25F0%259F%2587%25BA%25F0%259F%2587%25B8US_05%2520%2540WangCai_1%7Css%3A%2F%2FY2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHIXlCd1BXSDNWYW8%4038.68.134.122%3A806%2F%23%25F0%259F%2587%25BA%25F0%259F%2587%25B8US_06%2520%2540WangCai_1%7Css%3A%2F%2FY2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHIXlCd1BXSDNWYW8%4038.68.134.122%3A807%2F%23%25F0%259F%2587%25BA%25F0%259F%2587%25B8US_07%2520%2540WangCai_1%7Css%3A%2F%2FY2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHIXlCd1BXSDNWYW8%4038.68.134.122%3A808%2F%23%25F0%259F%2587%25BA%25F0%259F%2587%25B8US_08%2520%2540WangCai_1%7Css%3A%2F%2FY2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHIXlCd1BXSDNWYW8%4038.68.134.122%3A809%2F%23%25F0%259F%2587%25BA%25F0%259F%2587%25B8US_09%2520%2540WangCai_1%7Css%3A%2F%2FY2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHIXlCd1BXSDNWYW8%4038.68.134.122%3A810%2F%23%25F0%259F%2587%25BA%25F0%259F%2587%25B8US_10%2520%2540WangCai_1%7Css%3A%2F%2FY2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHIXlCd1BXSDNWYW8%4038.68.134.122%3A811%2F%23%25F0%259F%2587%25BA%25F0%259F%2587%25B8US_11%2520%2540WangCai_1%7Css%3A%2F%2FY2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpHIXlCd1BXSDNWYW8%4038.68.134.122%3A812%2F%23%25F0%259F%2587%25BA%25F0%259F%2587%25B8US_12%2520%2540WangCai_1&insert=false&config=https%3A%2F%2Fsaraphine.cf%2FClash-rule%2Fremoteconfig%2Fsaraphineconfig.ini&emoji=true&list=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&sort=false interval=86400 strict=false
+
+[General]
+loglevel = notify
+bypass-system = true
+skip-proxy = 127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,100.64.0.0/10,localhost,*.local,e.crashlytics.com,captive.apple.com,::ffff:0:0:0:0/1,::ffff:128:0:0:0/1
+#DNS设置或根据自己网络情况进行相应设置
+bypass-tun = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12
+dns-server = 119.29.29.29,223.5.5.5
+
+[Script]
+http-request https?:\/\/.*\.iqiyi\.com\/.*authcookie= script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+
+[Proxy]
+DIRECT = direct
+US_00 @WangCai_1 = ss, 38.68.134.122, 800, encrypt-method=chacha20-ietf-poly1305, password=G!yBwPWH3Vao, tfo=false, udp-relay=false
+US_01 @WangCai_1 = ss, 38.68.134.122, 801, encrypt-method=chacha20-ietf-poly1305, password=G!yBwPWH3Vao, tfo=false, udp-relay=false
+US_02 @WangCai_1 = ss, 38.68.134.122, 802, encrypt-method=chacha20-ietf-poly1305, password=G!yBwPWH3Vao, tfo=false, udp-relay=false
+US_03 @WangCai_1 = ss, 38.68.134.122, 803, encrypt-method=chacha20-ietf-poly1305, password=G!yBwPWH3Vao, tfo=false, udp-relay=false
+US_04 @WangCai_1 = ss, 38.68.134.122, 804, encrypt-method=chacha20-ietf-poly1305, password=G!yBwPWH3Vao, tfo=false, udp-relay=false
+US_05 @WangCai_1 = ss, 38.68.134.122, 805, encrypt-method=chacha20-ietf-poly1305, password=G!yBwPWH3Vao, tfo=false, udp-relay=false
+US_06 @WangCai_1 = ss, 38.68.134.122, 806, encrypt-method=chacha20-ietf-poly1305, password=G!yBwPWH3Vao, tfo=false, udp-relay=false
+US_07 @WangCai_1 = ss, 38.68.134.122, 807, encrypt-method=chacha20-ietf-poly1305, password=G!yBwPWH3Vao, tfo=false, udp-relay=false
+US_08 @WangCai_1 = ss, 38.68.134.122, 808, encrypt-method=chacha20-ietf-poly1305, password=G!yBwPWH3Vao, tfo=false, udp-relay=false
+US_09 @WangCai_1 = ss, 38.68.134.122, 809, encrypt-method=chacha20-ietf-poly1305, password=G!yBwPWH3Vao, tfo=false, udp-relay=false
+US_10 @WangCai_1 = ss, 38.68.134.122, 810, encrypt-method=chacha20-ietf-poly1305, password=G!yBwPWH3Vao, tfo=false, udp-relay=false
+US_11 @WangCai_1 = ss, 38.68.134.122, 811, encrypt-method=chacha20-ietf-poly1305, password=G!yBwPWH3Vao, tfo=false, udp-relay=false
+US_12 @WangCai_1 = ss, 38.68.134.122, 812, encrypt-method=chacha20-ietf-poly1305, password=G!yBwPWH3Vao, tfo=false, udp-relay=false
+
+[Proxy Group]
+🔰 节点选择 = select,♻️ 自动选择,🔮 负载均衡,DIRECT,US_00 @WangCai_1,US_01 @WangCai_1,US_02 @WangCai_1,US_03 @WangCai_1,US_04 @WangCai_1,US_05 @WangCai_1,US_06 @WangCai_1,US_07 @WangCai_1,US_08 @WangCai_1,US_09 @WangCai_1,US_10 @WangCai_1,US_11 @WangCai_1,US_12 @WangCai_1
+♻️ 自动选择 = url-test,US_00 @WangCai_1,US_01 @WangCai_1,US_02 @WangCai_1,US_03 @WangCai_1,US_04 @WangCai_1,US_05 @WangCai_1,US_06 @WangCai_1,US_07 @WangCai_1,US_08 @WangCai_1,US_09 @WangCai_1,US_10 @WangCai_1,US_11 @WangCai_1,US_12 @WangCai_1,url=http://www.gstatic.com/generate_204,interval=150
+🔮 负载均衡 = load-balance,default=.*,
+
+[Rule]
+RULE-SET,https://saraphine.cf/Clash-rule/BanAD.list,REJECT,update-interval=86400
+RULE-SET,https://saraphine.cf/Clash-rule/BanProgramAD.list,REJECT,update-interval=86400
+RULE-SET,https://saraphine.cf/Clash-rule/BanEasyList.list,REJECT,update-interval=86400
+RULE-SET,https://saraphine.cf/Clash-rule/BanEasyListChina.list,REJECT,update-interval=86400
+RULE-SET,https://saraphine.cf/Clash-rule/BanEasyPrivacy.list,REJECT,update-interval=86400
+RULE-SET,https://saraphine.cf/Clash-rule/Ruleset/1-direct,DIRECT,update-interval=86400
+GEOIP,CN,DIRECT
+RULE-SET,https://saraphine.cf/Clash-rule/ProxyLite.list,🔰 节点选择,update-interval=86400
+FINAL,🔰 节点选择
