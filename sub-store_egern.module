@@ -1,5 +1,5 @@
 mitm:
-  - sub.store
+  - sub-store.vercel.app
 scriptings:
   - http_request:
       name: Sub-Store
