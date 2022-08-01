@@ -1,0 +1,19 @@
+#!name=remove tieba AD (iOS15 required)
+#!desc=配合规则使用
+mitm:
+  - tiebac.baidu.com
+scriptings:
+  - http_response:
+      name: 贴吧json
+      script_url: >-
+        https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json.js
+      match: >-
+        ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(tiebaads\/commonbatch|c\/s\/sync)
+      body_required: true
+  - http_response:
+      name: 贴吧proto
+      script_url: >-
+        https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js
+      match: >-
+        ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)
+      body_required: true
