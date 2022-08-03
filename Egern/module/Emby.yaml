@@ -1,0 +1,11 @@
+#!name=emby premiere 
+scriptings:
+  - http_response:
+      name: EmbyPremiere.js
+      script_url: >-
+        https://gitlab.com/iptv-org/embypublic/-/raw/master/Script/EmbyPremiere.js
+      match: ^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice
+      body_required: true
+mitm:
+  hostnames:
+    - mb3admin.com
