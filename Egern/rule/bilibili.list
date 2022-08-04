@@ -1,4 +1,3 @@
-# bilibili unlock Streaming SE
 domain_set:
   - api.biliapi.com
   - api.biliapi.net
@@ -10,9 +9,5 @@ domain_set:
   - m.bilibili.com
   - upos-hz-mirrorakam.akamaized.net
   - www.bilibili.com
-  - cache.video.iqiyi.com
-  - mobileso.bz.mgtv.com
 domain_keyword_set:
   - cn-hk-eq-bcache-
-domain_suffix_set:
-  - api.mgtv.com
