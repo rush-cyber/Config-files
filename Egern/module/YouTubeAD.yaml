@@ -1,3 +1,5 @@
+#!name=YoutubeAD
+#!desc=Remove Youtube AD
 url_rewrites:
   - match: >-
       (^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+)
