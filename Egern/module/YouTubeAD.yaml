@@ -1,13 +1,13 @@
 url_rewrites:
-  - match: ctier=[A-Z]
-    location: citer=A
-    status_code: 302
   - match: >-
-      (^https?:\/\/(?!redirector)[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+)(ctier=L)(&.+)
-    location: $1$4
+      (^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+)
+    location: $1$2$3
     status_code: 307
   - match: >-
-      ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+(&oad|ctier)
+      ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad
+    location: http://reject
+    status_code: 307
+  - match: ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v\d\/player\/ad_break
     location: http://reject
     status_code: 307
   - match: ^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads
@@ -16,11 +16,14 @@ url_rewrites:
   - match: ^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking)
     location: http://reject
     status_code: 307
-  - match: ^https?:\/\/\s.youtube.com/api/stats/qoe?.*adformat=
+  - match: ^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext
     location: http://reject
     status_code: 307
 mitm:
   hostnames:
+    - '-redirector*.googlevideo.com'
     - '*.googlevideo.com'
-    - '*.youtube.com'
+    - www.youtube.com
+    - s.youtube.com
     - youtubei.googleapis.com
+
