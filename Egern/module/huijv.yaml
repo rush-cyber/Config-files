@@ -1,0 +1,30 @@
+url_rewrites:
+  - match: ^https?:\/\/os8\.pw\/(adConfigs|appConfiguration\/getAd)
+    location: http://reject
+    status_code: 307
+  - match: ^http:\/\/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\/goad\/ad\/
+    location: http://reject
+    status_code: 307
+  - match: ^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/
+    location: http://reject
+    status_code: 307
+  - match: ^https?:\/\/sf\d-ttcdn-tos\.pstatp\.com\/obj\/ad
+    location: http://reject
+    status_code: 307
+  - match: ^https?:\/\/www\.51devapp\.com\/adconfigs
+    location: http://reject
+    status_code: 307
+  - match: ^https?:\/\/.+?\.snssdk\.com\/ad\/
+    location: http://reject
+    status_code: 307
+mitm:
+  hostnames:
+    - sf?-ttcdn-tos.pstatp.com
+    - www.51devapp.com
+    - '*.snssdk.com'
+    - www.19831110.com
+    - api-access.pangolin-sdk-toutiao.com
+    - os8.pw
+    - www.umeng.com
+    - www.adview.cn
+    - adview.cn
