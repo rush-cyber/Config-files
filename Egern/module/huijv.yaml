@@ -1,3 +1,4 @@
+#!desc=荟聚动漫去广告
 url_rewrites:
   - match: ^https?:\/\/os8\.pw\/(adConfigs|appConfiguration\/getAd)
     location: http://reject
