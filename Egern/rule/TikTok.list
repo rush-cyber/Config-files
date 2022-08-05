@@ -1,3 +1,13 @@
+# NAME: TikTok
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2022-07-25 21:11:34
+# DOMAIN: 1
+# DOMAIN-KEYWORD: 2
+# DOMAIN-SUFFIX: 12
+# PROCESS-NAME: 1
+# USER-AGENT: 1
+# TOTAL: 17
 domain_set:
   - p16-tiktokcdn-com.akamaized.net
 domain_suffix_set:
@@ -14,6 +24,8 @@ domain_suffix_set:
   - tiktokcdn.com
   - tiktokv.com
 domain_keyword_set:
-  - '-tiktokcdn-com'
+  - musical.ly
+  - tiktok
 undefined:
   - TikTok*
+  - com.zhiliaoapp.musically
