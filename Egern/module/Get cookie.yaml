@@ -1,0 +1,49 @@
+scriptings:
+  - http_request:
+      name: 吾爱Cookie
+      script_url: >-
+        https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
+      match: https:\/\/www\.52pojie\.cn\/home\.php\?
+      body_required: true
+  - http_request:
+      name: 爱奇艺Cookie
+      script_url: >-
+        https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+      match: ^https:\/\/passport\.iqiyi\.com\/apis\/user\/
+      body_required: true
+  - http_request:
+      name: 哔哩漫画Cookie
+      script_url: >-
+        https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js
+      match: >-
+        ^https:\/\/passport\.biligame\.com\/api\/login\/sso.+?version%22%3A%22(3|4|5)
+      body_required: true
+  - http_request:
+      name: 贴吧Cookie
+      script_url: >-
+        https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js
+      match: https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login
+      body_required: true
+  - http_request:
+      name: 京东签到Cookie
+      script_url: >-
+        https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+      match: >-
+        ^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?)
+      body_required: true
+  - http_request:
+      name: 快看漫画Cookie
+      script_url: >-
+        https://raw.githubusercontent.com/NobyDa/Script/master/KuaiKan-DailyBonus/KKMH.js
+      match: https:\/\/api\.kkmh\.com\/v\d\/passport\/user
+      body_required: true
+mitm:
+  hostnames:
+    - passport.iqiyi.com
+    - www.52pojie.cn
+    - api.m.jd.com
+    - ms.jr.jd.com
+    - me-api.jd.com
+    - passport.biligame.com
+    - c.tieba.baidu.com
+    - api.kkmh.com
