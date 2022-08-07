@@ -1,3 +1,6 @@
+#!name=BoxJs
+#!desc=http://boxjs.com
+
 scriptings:
   - http_request:
       name: 'Rewrite: BoxJs'
@@ -6,3 +9,11 @@ scriptings:
       match: https?:\/\/boxjs\.(com|net)
       body_required: true
       timeout: 120
+
+mitm:
+  hostnames:
+    - boxjs.com
+    - boxjs.net
+
+
+
