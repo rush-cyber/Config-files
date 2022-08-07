@@ -1,0 +1,16 @@
+scriptings:
+  - http_request:
+      name: 吾爱签到
+      script_url: >-
+        https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
+      cron: 0 9 * * *
+      body_required: true
+  - http_request:
+      name: 吾爱获取Cookie
+      script_url: >-
+        https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
+      match: https:\/\/www\.52pojie\.cn\/home\.php\?
+      body_required: true
+mitm:
+  hostnames:
+    - www.52pojie.cn
