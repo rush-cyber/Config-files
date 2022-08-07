@@ -1,0 +1,24 @@
+#!name= iRingo for TV app
+#!desc=(V2) 全面自定义「TV app」功能
+#!openUrl=http://boxjs.com/#/app/iRingo.TV
+#!author=VirgilClyne
+#!homepage=https://github.com/VirgilClyne
+#!manual=https://github.com/VirgilClyne/iRingo/wiki/📺TV-app
+#!icon=https://www.apple.com/v/apple-tv-app/p/images/overview/apple_tv_icon__br5y3uwaibjm_large.png
+
+scriptings:
+  - http_request:
+      name: TV Request
+      script_url: >-
+        https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/TV.request.js
+      match: ^https?:\/\/uts-api\.itunes\.apple\.com\/uts\/(v1|v2|v3)\/.*
+      body_required: true
+  - http_response:
+      name: TV Response
+      script_url: >-
+        https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/TV.response.js
+      match: ^https?:\/\/uts-api\.itunes\.apple\.com\/uts\/(v1|v2|v3)\/.*
+      body_required: true
+mitm:
+  hostnames:
+    - uts-api.itunes.apple.com
