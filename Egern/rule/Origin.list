@@ -1,0 +1,14 @@
+# NAME: Origin
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2022-08-05 22:37:44
+# DOMAIN: 4
+# DOMAIN-SUFFIX: 1
+# TOTAL: 5
+domain_set:
+  - cloudsync-prod.s3.amazonaws.com
+  - origin-a.akamaihd.net
+  - rtm.tnt-ea.com
+  - ssl-lvlt.cdn.ea.com
+domain_suffix_set:
+  - origin.com
