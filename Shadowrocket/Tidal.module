@@ -1,7 +1,0 @@
-#!name=Tidal Plus
-#!desc=Unlock Tidal
-[Script]
-Tidal Crack = type=http-request,script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/TIDALHiFiPlusCrack.js,pattern=^https?:\/\/api\.tidal\.com\/v1\/(pages\/album|(user|track|page)s\/(\d+)\/(state|subscription|lyrics|onboarding|playbackinfopostpaywall)),max-size=131072,timeout=10,enable=true
-
-[MITM]
-hostname = api.tidal.com
