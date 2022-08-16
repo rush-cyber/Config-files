@@ -1,0 +1,26 @@
+url_rewrites:
+  - match: ^https?:\/\/rich\.kuwo\.cn\/AdService\/kaiping\/.+
+    location: http://reject
+    status_code: 307
+  - match: ^https?:\/\/.+\.kwcdn\.kuwo\.cn\/star\/upload\/.+
+    location: http://reject
+    status_code: 307
+  - match: ^https?:\/\/mobilead\.kuwo\.cn\/EcomResourceServer\/adBubble\/.+
+    location: http://reject
+    status_code: 307
+  - match: ^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?uid\=\d+
+    location: http://musicpay.kuwo.cn/music.pay?uid=1
+    status_code: 302
+scriptings:
+  - http_response:
+      name: 酷我vip解锁
+      script_url: https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Kuwo.js
+      match: ^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice)
+      body_required: true
+mitm:
+  hostnames:
+    - mobilead.kuwo.cn
+    - rich.kuwo.cn
+    - '*.kwcdn.kuwo.cn'
+    - vip1.kuwo.cn
+    - musicpay.kuwo.cn
