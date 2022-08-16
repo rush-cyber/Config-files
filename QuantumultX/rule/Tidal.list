@@ -1,2 +1,4 @@
 # NAME=Tidal
+# Domain=1
+# Total=1
 HOST-SUFFIX,tidal.com,Tidal
