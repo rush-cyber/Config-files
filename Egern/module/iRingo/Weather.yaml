@@ -1,24 +1,32 @@
-header_rewrites: []
+# name=iRingo Weather
 scriptings:
-  - http_response:
-      name: Apple Weather Availability
+  - http_request:
+      name: Weather Availability Request
       script_url: >-
-        https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Weather.Availability.js
-      match: ^https?:\/\/weather-data\.apple\.com\/(v1|v2)\/availability\/.*
+        https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Weather.Availability.request.js
+      match: ^https?:\/\/weather-data\.apple\.com\/(v1|v2|v3)\/availability\/.*
+  - http_response:
+      name: Weather Availability Response
+      script_url: >-
+        https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Weather.Availability.response.js
+      match: ^https?:\/\/weather-data\.apple\.com\/(v1|v2|v3)\/availability\/.*
       body_required: true
   - http_response:
-      name: Apple Weather
-      script_url: https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Weather.js
-      match: ^https?:\/\/weather-data\.apple\.com\/(v1|v2)\/weather\/.*
+      name: Weather Response
+      script_url: >-
+        https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Weather.response.js
+      match: ^https?:\/\/weather-data\.apple\.com\/(v1|v2|v3)\/weather\/.*
       body_required: true
       timeout: 20
   - http_request:
-      name: Apple Weather Map
+      name: Weather Map Request
       script_url: >-
-        https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Weather.Map.js
+        https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/Weather.Map.request.js
       match: >-
-        ^https?:\/\/weather-map\.apple\.com\/(v1|v2)\/mapOverlay\/.*(\?.*country=CN.*)
+        ^https?:\/\/weather-map2?\.apple\.com\/(v1|v2)\/mapOverlay\/\w+(\?.*country=CN.*)?$
 mitm:
   hostnames:
     - weather-data.apple.com
+    - weather-data-origin.apple.com
     - weather-map.apple.com
+    - weather-map2.apple.com
