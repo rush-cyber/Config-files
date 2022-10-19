@@ -1,0 +1,20 @@
+#!name=去除 Youtube 视频广告 
+#!desc=去除 Youtube 视频/贴片广告
+scriptings:
+  - http_response:
+      name: youtube-player
+      script_url: >-
+        https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube-player.js
+      match: ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player
+      body_required: true
+  - http_request:
+      name: youtube-fake
+      script_url: >-
+        https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube-fake.js
+      match: >-
+        ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad
+mitm:
+  hostnames:
+    - '-redirector*.googlevideo.com'
+    - '*.googlevideo.com'
+    - youtubei.googleapis.com
